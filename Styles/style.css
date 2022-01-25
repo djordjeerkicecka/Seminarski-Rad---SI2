@@ -1,0 +1,174 @@
+:root{
+
+
+    --font-size: 16px;
+    --transition : .4s ease-in-out;
+}
+/*Base Stlyes*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size) ;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/*Status Message*/
+.access-message {
+    width: 100vw;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    color: white;
+    animation: MessageSlideUp 2s ease-in-out 3s forwards;
+    z-index: 1000;
+}
+
+.access-granted {
+    background: green;
+}
+
+.access-denied {
+    background-color: rgb(170, 0, 0);
+}
+
+@keyframes MessageSlideUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-120%);
+    }
+}
+
+/*Nav*/
+.navbar .h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.nav-line {
+    border: none;
+    background-color: white;
+    height: 2px;
+}
+
+/*Links*/
+.nav-link {
+    font-size: 1.5rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: orangered;
+}
+
+/*Aside*/
+.aside-user {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 4.4rem;
+    font-size: 1.6rem;
+}
+
+/*Section*/
+.section-login {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-login .form-user {
+    display: block;
+    width: 45%;
+}
+
+.section-table {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.section-title {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+.form-filter{
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.form-filter .form-label {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/*Form*/
+.form-row  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding: .4rem 0;
+}
+.form-row .form-label {
+    width: 20%;
+}
+.form-row .form-text {
+    width: 50% ;
+}
+
+/*Table*/
+.table-clients {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-clients  tr {
+    border-bottom: 2px solid black;
+}
+.table-clients  th {
+    font-size: 1.2rem;
+}
+.table-clients  th, td {
+    padding: 1rem 0;
+}
+
+.table-admin {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-admin tr {
+    border-bottom: 2px solid black;
+}
+.table-admin  th {
+    font-size: 1.2rem;
+}
+.table-admin td {
+    padding: 0;
+}
+
+.td-adminControls {
+    padding: 0;
+    text-align: center;
+}
+.td-adminControls form {
+    width: 100%;
+    margin-left: 0;
+}
+.td-adminControls form .btn {
+    width: 100%;
+}
